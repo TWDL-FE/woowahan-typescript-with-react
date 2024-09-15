@@ -325,6 +325,7 @@ type ButtonProps = {
 ```
 
 1. `React.ButtonHTMLAttributes<HTMLButtonElement>`만 사용하는 경우:
+   `<button>` 요소에서 사용할 수 있는 속성들만 정의한다. 예를 들어, onClick, disabled, type 등의 기본적인 속성을 제공한다.
 
 ```ts
 interface CustomButtonProps
@@ -343,6 +344,8 @@ const CustomButton = (props: CustomButtonProps) => {
 ```
 
 2. `React.DetailedHTMLProps`를 사용하는 경우:
+
+`React.DetailedHTMLProps`는 더 넓은 범위를 다루는 타입이다. `React.ButtonHTMLAttributes<HTMLButtonElement>` 외에도 추가적인 React 특성, 예를 들어 ref와 같은 속성을 더해준다.
 
 ```ts
 interface CustomButtonProps
